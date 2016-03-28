@@ -11,5 +11,27 @@ import SpriteKit
 class GameScene: SKScene {
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
+    
+    let deck = Deck(
+      name: "Animals",
+      cardNames: [
+        "Dog",
+        "Cat",
+        "Squirrel",
+        "Horse",
+        "Parrot",
+        "Ferret",
+        "Pig",
+        "Cow",
+        "Snake",
+        "Lion",
+        "Giraffe",
+        "Human"
+      ]
+    )
+    
+    print(deck)
+    deck.shuffleCards()
+    print(deck)
   }
 }

@@ -11,6 +11,8 @@
 		03BA75C61CA9C61C002EACB9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75C51CA9C61C002EACB9 /* GameScene.swift */; };
 		03BA75CA1CA9C61C002EACB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA75C91CA9C61C002EACB9 /* Assets.xcassets */; };
 		03BA75CD1CA9C61C002EACB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA75CB1CA9C61C002EACB9 /* MainMenu.xib */; };
+		03BA75D81CA9C758002EACB9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75D71CA9C758002EACB9 /* Card.swift */; };
+		03BA75DA1CA9C777002EACB9 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75D91CA9C777002EACB9 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		03BA75C91CA9C61C002EACB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BA75CC1CA9C61C002EACB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		03BA75CE1CA9C61C002EACB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03BA75D71CA9C758002EACB9 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		03BA75D91CA9C777002EACB9 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,31 @@
 		03BA75C21CA9C61C002EACB9 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
-				03BA75C31CA9C61C002EACB9 /* AppDelegate.swift */,
+				03BA75D61CA9C744002EACB9 /* Models */,
 				03BA75C51CA9C61C002EACB9 /* GameScene.swift */,
-				03BA75C91CA9C61C002EACB9 /* Assets.xcassets */,
-				03BA75CB1CA9C61C002EACB9 /* MainMenu.xib */,
-				03BA75CE1CA9C61C002EACB9 /* Info.plist */,
+				03BA75D41CA9C739002EACB9 /* Support */,
 			);
 			path = Memory;
+			sourceTree = "<group>";
+		};
+		03BA75D41CA9C739002EACB9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				03BA75C31CA9C61C002EACB9 /* AppDelegate.swift */,
+				03BA75CB1CA9C61C002EACB9 /* MainMenu.xib */,
+				03BA75C91CA9C61C002EACB9 /* Assets.xcassets */,
+				03BA75CE1CA9C61C002EACB9 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		03BA75D61CA9C744002EACB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03BA75D71CA9C758002EACB9 /* Card.swift */,
+				03BA75D91CA9C777002EACB9 /* Deck.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BA75DA1CA9C777002EACB9 /* Deck.swift in Sources */,
 				03BA75C61CA9C61C002EACB9 /* GameScene.swift in Sources */,
+				03BA75D81CA9C758002EACB9 /* Card.swift in Sources */,
 				03BA75C41CA9C61C002EACB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +299,7 @@
 				03BA75D31CA9C61C002EACB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
