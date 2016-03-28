@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import GameplayKit
 
+/// Represents a deck of cards used in the memory game
 class Deck {
   /// List of cards belonging to this deck
   var cards: [Card] = []
@@ -34,6 +34,16 @@ class Deck {
   convenience init(name: String, cards: [Card]) {
     self.init(name: name)
     self.cards = cards
+    
+    // Count the number of rows we need by getting the square root of the double count
+    let rows = floor(sqrt(Double(cards.count * 2)))
+    
+    // Count the number of cols we need by dividing the double count with the number of rows
+    let cols = ceil(Double(cards.count * 2) / rows)
+    
+    guard Int(rows * cols) == cards.count * 2 else {
+      fatalError("Given deck size is invalid, cannot produce an uniform grid size")
+    }
   }
   
   /// Create a new Deck with just the names of the cards
@@ -47,33 +57,11 @@ class Deck {
   }
 }
 
-// MARK: Manipulation
-
-extension Deck {
-  /// Shuffle the cards in this deck using the fisher-yates algorithm
-  func shuffleCards() {
-    guard cards.count >= 2 else { return }
-    
-    // For each card in the deck
-    for index in 0 ..< cards.count - 1 {
-      // Generate a random int between the remaining count of the array after
-      // looping through the indexes.
-      let newIndex = Int(arc4random_uniform(UInt32(cards.count - index))) + index
-      
-      // Make sure it's not the same as the current one or we'll leave it
-      guard index != newIndex else { continue }
-      
-      // Swap the cards in the cards array
-      swap(&cards[index], &cards[newIndex])
-    }
-  }
-}
-
 /// MARK: - CustomStringConvertible
 
 extension Deck: CustomStringConvertible {
   /// String representation of this deck
   var description: String {
-    return "\(name): \(cards.map({$0.description}).joinWithSeparator(", "))"
+    return "\(name): \(cards.map { "\($0)" }.joinWithSeparator(", "))"
   }
 }

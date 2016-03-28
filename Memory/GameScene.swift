@@ -30,8 +30,7 @@ class GameScene: SKScene {
       ]
     )
     
-    print(deck)
-    deck.shuffleCards()
-    print(deck)
+    let board = Board(deck: deck)
+    print(board)
   }
 }

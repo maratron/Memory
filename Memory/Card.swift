@@ -21,13 +21,22 @@ class Card {
   init(name: String) {
     self.name = name
   }
+  
+  static let empty = Card(name: "")
 }
 
-/// MARK: - CustomStringConvertible
+// MARK: - CustomStringConvertible
 
 extension Card: CustomStringConvertible {
   /// String representation of this card
   var description: String {
     return self.name
   }
+}
+
+// MARK: - Equatable
+
+extension Card: Equatable { }
+func == (lhs: Card, rhs: Card) -> Bool {
+  return lhs.name == rhs.name
 }

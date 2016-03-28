@@ -13,6 +13,9 @@
 		03BA75CD1CA9C61C002EACB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA75CB1CA9C61C002EACB9 /* MainMenu.xib */; };
 		03BA75D81CA9C758002EACB9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75D71CA9C758002EACB9 /* Card.swift */; };
 		03BA75DA1CA9C777002EACB9 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75D91CA9C777002EACB9 /* Deck.swift */; };
+		03BA75E41CA9D56E002EACB9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E31CA9D56E002EACB9 /* Tile.swift */; };
+		03BA75E61CA9D5A3002EACB9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E51CA9D5A3002EACB9 /* Board.swift */; };
+		03BA75E91CA9D989002EACB9 /* CollectionType+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		03BA75CE1CA9C61C002EACB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BA75D71CA9C758002EACB9 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		03BA75D91CA9C777002EACB9 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		03BA75E31CA9D56E002EACB9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		03BA75E51CA9D5A3002EACB9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Shuffle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		03BA75C21CA9C61C002EACB9 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				03BA75E71CA9D96B002EACB9 /* Extensions */,
 				03BA75D61CA9C744002EACB9 /* Models */,
 				03BA75C51CA9C61C002EACB9 /* GameScene.swift */,
 				03BA75D41CA9C739002EACB9 /* Support */,
@@ -79,8 +86,18 @@
 			children = (
 				03BA75D71CA9C758002EACB9 /* Card.swift */,
 				03BA75D91CA9C777002EACB9 /* Deck.swift */,
+				03BA75E31CA9D56E002EACB9 /* Tile.swift */,
+				03BA75E51CA9D5A3002EACB9 /* Board.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		03BA75E71CA9D96B002EACB9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +172,9 @@
 			files = (
 				03BA75DA1CA9C777002EACB9 /* Deck.swift in Sources */,
 				03BA75C61CA9C61C002EACB9 /* GameScene.swift in Sources */,
+				03BA75E61CA9D5A3002EACB9 /* Board.swift in Sources */,
+				03BA75E91CA9D989002EACB9 /* CollectionType+Shuffle.swift in Sources */,
+				03BA75E41CA9D56E002EACB9 /* Tile.swift in Sources */,
 				03BA75D81CA9C758002EACB9 /* Card.swift in Sources */,
 				03BA75C41CA9C61C002EACB9 /* AppDelegate.swift in Sources */,
 			);
