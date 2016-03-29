@@ -12,11 +12,13 @@ class Tile {
   let card: Card
   let col: Int
   let row: Int
+  let matched: Bool
   
   init(card: Card, col: Int, row: Int) {
     self.card = card
     self.col = col
     self.row = row
+    self.matched = false
   }
   
   static let empty = Tile(card: Card.empty, col: 0, row: 0)

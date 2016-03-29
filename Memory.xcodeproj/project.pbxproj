@@ -16,6 +16,8 @@
 		03BA75E41CA9D56E002EACB9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E31CA9D56E002EACB9 /* Tile.swift */; };
 		03BA75E61CA9D5A3002EACB9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E51CA9D5A3002EACB9 /* Board.swift */; };
 		03BA75E91CA9D989002EACB9 /* CollectionType+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */; };
+		03BA75EC1CA9EEB9002EACB9 /* BoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75EB1CA9EEB9002EACB9 /* BoardNode.swift */; };
+		03BA75EE1CA9EEBE002EACB9 /* TileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA75ED1CA9EEBE002EACB9 /* TileNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		03BA75E31CA9D56E002EACB9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		03BA75E51CA9D5A3002EACB9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Shuffle.swift"; sourceTree = "<group>"; };
+		03BA75EB1CA9EEB9002EACB9 /* BoardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardNode.swift; sourceTree = "<group>"; };
+		03BA75ED1CA9EEBE002EACB9 /* TileNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				03BA75E71CA9D96B002EACB9 /* Extensions */,
 				03BA75D61CA9C744002EACB9 /* Models */,
+				03BA75EA1CA9EEAE002EACB9 /* Nodes */,
 				03BA75C51CA9C61C002EACB9 /* GameScene.swift */,
 				03BA75D41CA9C739002EACB9 /* Support */,
 			);
@@ -98,6 +103,15 @@
 				03BA75E81CA9D989002EACB9 /* CollectionType+Shuffle.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		03BA75EA1CA9EEAE002EACB9 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				03BA75EB1CA9EEB9002EACB9 /* BoardNode.swift */,
+				03BA75ED1CA9EEBE002EACB9 /* TileNode.swift */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BA75EC1CA9EEB9002EACB9 /* BoardNode.swift in Sources */,
 				03BA75DA1CA9C777002EACB9 /* Deck.swift in Sources */,
 				03BA75C61CA9C61C002EACB9 /* GameScene.swift in Sources */,
 				03BA75E61CA9D5A3002EACB9 /* Board.swift in Sources */,
 				03BA75E91CA9D989002EACB9 /* CollectionType+Shuffle.swift in Sources */,
 				03BA75E41CA9D56E002EACB9 /* Tile.swift in Sources */,
 				03BA75D81CA9C758002EACB9 /* Card.swift in Sources */,
+				03BA75EE1CA9EEBE002EACB9 /* TileNode.swift in Sources */,
 				03BA75C41CA9C61C002EACB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

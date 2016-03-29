@@ -9,28 +9,37 @@
 import SpriteKit
 
 class GameScene: SKScene {
+  var boardNode: BoardNode?
+  
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
+    
+    backgroundColor = NSColor(red: 217/255, green: 203/255, blue: 158/255, alpha: 1.0)
     
     let deck = Deck(
       name: "Animals",
       cardNames: [
         "Dog",
         "Cat",
-        "Squirrel",
-        "Horse",
-        "Parrot",
-        "Ferret",
-        "Pig",
         "Cow",
         "Snake",
         "Lion",
-        "Giraffe",
         "Human"
       ]
     )
     
+    // Create and shuffle board
     let board = Board(deck: deck)
-    print(board)
+    board.resetAndShuffleTiles()
+    
+    boardNode = BoardNode(board: board, size: view.frame.size)
+    addChild(boardNode!)
+  }
+  
+  override func didChangeSize(oldSize: CGSize) {
+    super.didChangeSize(oldSize)
+    
+    boardNode?.size = size
+    boardNode?.layoutTileNodes()
   }
 }

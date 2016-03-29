@@ -25,13 +25,13 @@ class Board {
   init(deck: Deck) {
     self.deck = deck
     self.size = deck.cards.count
-    self.createTiles()
   }
   
-  func createTiles() {
+  func resetAndShuffleTiles() {
     self.tiles = Array(count: rows, repeatedValue: Array(count: cols, repeatedValue: Tile.empty))
 
     var cardPairs = deck.cards.reduce([], combine: { $0 + [$1, $1] })
+    cardPairs.shuffleInPlace()
     
     for row in 0 ..< rows {
       for col in 0 ..< cols {
@@ -43,11 +43,32 @@ class Board {
       }
     }
   }
-  
-  subscript(row: Int, column: Int) -> Tile {
+}
+
+// MARK: - Game logic
+
+extension Board {
+  /// Shorthand subscript accessor for board[row,column] style tile get
+  ///
+  /// - parameter row: The row to access
+  /// - parameter col: The column to access
+  ///
+  /// - returns: The Tile found, or nil
+  subscript(row: Int, column: Int) -> Tile? {
     get {
+      if row >= rows || column >= cols { return nil }
+      
       return self.tiles[row][column]
     }
+  }
+  
+  /// Check if the board has matching tiles (cards) in two points
+  func hasMatchingTilesAt(rowOne rowOne: Int, colOne: Int, rowTwo: Int, colTwo: Int) -> Bool {
+    guard let tileOne = self[rowOne, colOne], tileTwo = self[rowOne, colOne] else {
+      return false
+    }
+    
+    return tileOne.card == tileTwo.card
   }
 }
 

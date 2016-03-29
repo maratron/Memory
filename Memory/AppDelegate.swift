@@ -16,17 +16,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet weak var window: NSWindow!
   @IBOutlet weak var skView: SKView!
   
+  var skScene: SKScene?
+  
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    self.skView!.ignoresSiblingOrder = true
-    self.skView!.showsFPS = true
-    self.skView!.showsNodeCount = true
+    window!.delegate = self
     
-    let scene = GameScene(size: skView!.frame.size)
-    scene.scaleMode = .AspectFit
-    self.skView!.presentScene(scene)
+    skView!.ignoresSiblingOrder = true
+    skView!.showsFPS = true
+    skView!.showsNodeCount = true
+    
+    skScene = GameScene(size: skView!.frame.size)
+    skScene!.scaleMode = .AspectFit
+    skView!.presentScene(skScene!)
   }
   
   func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
     return true
+  }
+}
+
+extension AppDelegate: NSWindowDelegate {
+  func windowDidResize(notification: NSNotification) {
+    skScene?.size = skView.frame.size
   }
 }
